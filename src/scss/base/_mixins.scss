@@ -1,0 +1,41 @@
+@mixin font_set($line-height,$font-size: $default-fs,$color: var(--default-font-color),$font-weight: var(--default-fw),$font-family: var(--default-ff)){
+    color: $color;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    font-family: $font-family;
+}
+@mixin flex_column($gap: 0px){
+    row-gap: $gap;
+    @extend %flex_column;
+}
+@mixin flex_row($gap: 0px){
+    column-gap: $gap;
+    @extend %flex_row;
+}
+
+@mixin xl_screen(){
+    @media (max-width: $breakpoint-1){
+        @content;
+    }
+}
+@mixin l_screen(){
+    @media (max-width: $breakpoint-2){
+        @content;
+    }
+}
+@mixin md_screen(){
+    @media (max-width: $breakpoint-3){
+        @content;
+    }
+}
+@mixin sm_screen(){
+    @media (max-width: $breakpoint-4){
+        @content;
+    }
+}
+@mixin xs_screen(){
+    @media (max-width: $breakpoint-5){
+        @content;
+    }
+}

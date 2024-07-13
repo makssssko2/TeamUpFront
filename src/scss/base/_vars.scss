@@ -1,0 +1,30 @@
+// default html font-size (px)
+$default-fs: 18;
+
+// Media breakpoints
+$breakpoint-1: 1300px;
+$breakpoint-2: 1020px;
+$breakpoint-3: 790px;
+$breakpoint-4: 570px;
+$breakpoint-5: 420px;
+
+:root{
+    // Without padding container width
+    --container-width: 1200px;
+    // paddings
+    --container-padding: 15px;
+    --default-ff: 'Fira Sans';
+    --default-fw: 600;
+    --main-color: #FFF;
+    --default-text-color: var(--main-color);
+    --background-gray: #272727;
+    --light-gray: #c4c4c4;
+    --gray: #c2c2c2;
+    --price-color: #efc58b;
+    --nav-gray: #2F2F2F;
+    --item-bg: #EDEDED;
+    --item-desc-color: #757575;
+    --bullet: #656565;
+    --link: #959595;
+    
+}
