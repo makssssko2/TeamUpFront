@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'NT Somic';
+    src: url('/src/fonts/NTSomic-Regular.woff2') format('woff2'),
+         url('/src/fonts/NTSomic-Regular.ttf') format('truetype'),
+         url('/src/fonts/NTSomic-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NT Somic';
+    src: url('/src/fonts/NTSomic-Bold.woff2') format('woff2'),
+         url('/src/fonts/NTSomic-Bold.ttf') format('truetype'),
+         url('/src/fonts/NTSomic-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NT Somic';
+    src: url('/src/fonts/NTSomic-Medium.woff2') format('woff2'),
+         url('/src/fonts/NTSomic-Medium.ttf') format('truetype'),
+         url('/src/fonts/NTSomic-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}

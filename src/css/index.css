@@ -1,0 +1,197 @@
+@import url("./fonts.css");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Links */
+a, a:link, a:visited, a:hover {
+  text-decoration: none; }
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block; }
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit; }
+
+ul, ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+img, svg {
+  max-width: 100%;
+  height: auto; }
+
+address {
+  font-style: normal; }
+
+/* Form */
+input, textarea, button, select {
+  text-align: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent; }
+
+input::-ms-clear {
+  display: none; }
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer; }
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  display: block; }
+
+:root {
+  --container-width: 1200px;
+  --container-padding: 15px;
+  --default-ff: 'NT Somic';
+  --default-fw: 400;
+  --main-color: #1c0fb1;
+  --default-text-color: var(--main-color);
+  --sub-purple: #2d164a;
+  --input-border: #E2E2E2;
+  --placeholder: #909090;
+  --error: #B92121;
+  --placeholder-error: #DF8F8F; }
+
+.auth, .auth__container, .auth-form, .auth-form__inputs, .auth-form__buttons, .auth-form__errors {
+  display: flex;
+  flex-direction: column; }
+
+html {
+  font-size: 18px;
+  font-family: var(--default-ff);
+  font-weight: var(--default-fw);
+  color: var(--default-text-color); }
+
+.stop-scroll {
+  overflow: hidden; }
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding) * 2);
+  padding: 0 var(--container-padding);
+  margin: 0 auto; }
+
+.auth {
+  min-width: 98vw;
+  min-height: 100vh;
+  background-image: url("/src/img/background-auth.png");
+  row-gap: 0px;
+  justify-content: center;
+  align-items: center; }
+  .auth__container {
+    row-gap: 11px;
+    width: calc(416px + 15px*2);
+    padding: 0 15px; }
+  .auth__logo {
+    align-self: center; }
+  .auth__form-container {
+    background-color: #FFF;
+    border-radius: 15px;
+    padding: 25px 25px 10px; }
+  .auth__title {
+    text-align: center;
+    margin-bottom: 36px;
+    color: var(--default-font-color);
+    font-size: 32px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff); }
+
+.auth-form {
+  row-gap: 66px;
+  margin-bottom: 31px; }
+  .auth-form__inputs {
+    row-gap: 14px; }
+  .auth-form__input {
+    padding: 17px 22px;
+    box-shadow: 0 0 0 1px var(--input-border);
+    border-radius: 15px;
+    align-self: stretch;
+    width: 100%;
+    color: var(--placeholder);
+    font-size: 15px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff); }
+    .auth-form__input::placeholder {
+      color: var(--placeholder);
+      font-size: 15px;
+      font-weight: var(--default-fw);
+      line-height: normal;
+      font-family: var(--default-ff); }
+    .auth-form__input_error {
+      box-shadow: 0 0 0 1px var(--error);
+      color: var(--error); }
+      .auth-form__input_error::placeholder {
+        color: var(--placeholder-error); }
+  .auth-form__forget {
+    color: var(--default-font-color);
+    font-size: 13px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff);
+    text-decoration: underline;
+    margin-left: 15px; }
+  .auth-form__buttons {
+    row-gap: 14px; }
+  .auth-form__button {
+    padding: 12px;
+    border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--main-color);
+    font-size: 20px; }
+    .auth-form__button_main {
+      background-color: var(--main-color);
+      font-weight: 500;
+      color: #fff; }
+  .auth-form__errors {
+    row-gap: 0px;
+    margin-left: 15px;
+    margin-top: 5px; }
+  .auth-form__error {
+    color: var(--error);
+    font-size: 11px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff); }
+  .auth-form__text {
+    color: var(--sub-purple);
+    font-size: 16px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff); }
+    .auth-form__text .auth-form__forget {
+      color: var(--main-color);
+      font-size: inherit;
+      margin: 0; }
+    .auth-form__text_center {
+      text-align: center; }
+
+/*# sourceMappingURL=index.css.map */
