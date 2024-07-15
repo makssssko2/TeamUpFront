@@ -43,11 +43,11 @@ export default function AuthProvider({children}) {
         }
     }
 
-    const reg = async (email,password,birthday,name) => {
+    const reg = async (email,password,surname,name) => {
         let errorMessage;
         try {
             setIsAuthLoading(true);
-            const response = await AuthController.registration(email,password,birthday,name);
+            const response = await AuthController.registration(email,password,surname,name);
             localStorage.setItem('token',(response).data.accessToken);
             setIsAuth(true);
             console.log(response);

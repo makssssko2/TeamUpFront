@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = '#';
+export const API_URL = 'https://my-teamup.ru/api';
 
 const api = axios.create({
     withCredentials: true,
@@ -14,7 +14,7 @@ api.interceptors.request.use( (config) => {
 
 api.interceptors.response.use((config) => config, async (error) => {
     const originalRequest = error.config;
-    if(error.response.status == 401 && error.config && !error.config._isRetry) {
+    if(error.response.status === 401 && error.config && !error.config._isRetry) {
         originalRequest._isRetry = true;
         try {
             const response = await axios.post(API_URL + '/refresh',undefined,{withCredentials: true});

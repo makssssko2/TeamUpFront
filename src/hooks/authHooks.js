@@ -6,6 +6,7 @@ const useValid = (value, validations) => {
     const [maxLengthError, setMaxLengthError] = useState(false);
     const [mailError, setMailError] = useState(false);
     const [birthError, setBirthError] = useState(false);
+    const [passEqualError,setPassEqualError] = useState(false);
     const [errors, setErrors] = useState({});
     const [correct, setCorrect] = useState(false);
     useEffect(() => {
@@ -78,6 +79,22 @@ const useValid = (value, validations) => {
                         setErrors(tempErrs);
                     }
                     break;
+                    case "passEqual":
+                        console.log(`passRep = ${value},  pass = ${validations[validation]}`)
+                        if (value === validations[validation]) {
+                            setPassEqualError(false);
+                            tempErrs["passEqual"] = null;
+                            setErrors(tempErrs);
+                        } else {
+                            setPassEqualError(true);
+                            tempErrs[
+                                "passEqual"
+                            ] = `Пароли должны совпадать`;
+                            setErrors(tempErrs);
+                        }
+                        break;
+                    default :
+                        break;
             }
         }
     }, [value]);
@@ -89,10 +106,11 @@ const useValid = (value, validations) => {
                 maxLengthError ||
                 minLengthError ||
                 birthError ||
-                mailError
+                mailError ||
+                passEqualError
             )
         );
-    }, [isEmpty, maxLengthError, minLengthError, birthError, mailError]);
+    }, [isEmpty, maxLengthError, minLengthError, birthError, mailError, passEqualError]);
 
     return {
         isEmpty,
@@ -100,6 +118,7 @@ const useValid = (value, validations) => {
         maxLengthError,
         mailError,
         birthError,
+        passEqualError,
         errors,
         correct,
     };

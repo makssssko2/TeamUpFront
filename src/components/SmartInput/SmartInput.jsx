@@ -1,5 +1,4 @@
 export default function SmartInput({ children, className, type, name, input }) {
-    console.log(input);
     return (
         <div className="auth-form__inputBlock">
             <input
