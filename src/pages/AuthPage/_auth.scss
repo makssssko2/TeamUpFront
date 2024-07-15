@@ -1,0 +1,148 @@
+.page {
+
+    // .page__auth
+
+    &__auth {
+    }
+}
+.auth {
+
+    min-width: 98vw;
+    min-height: 100vh;
+    background-image: url('/src/img/background-auth.png');
+    @include flex_column();
+    justify-content: center;
+    align-items: center;
+
+    // .auth__container
+
+    &__container {
+        @include flex_column(11px);
+        width: calc(416px + 15px*2);
+        padding: 0 15px;
+    }
+
+    // .auth__logo
+
+    &__logo {
+        align-self: center;
+    }
+
+    // .auth__form-container
+
+    &__form-container {
+        background-color: #FFF;
+        border-radius: 15px;
+        padding: 25px 25px 10px;
+    }
+
+    // .auth__form
+
+    &__form {
+    }
+
+     // .auth-form__title
+
+     &__title {
+        text-align: center;
+        margin-bottom: 36px;
+        @include font_set(normal,32px);
+    }
+}
+
+.auth-form {
+
+    @include flex_column(66px);
+    margin-bottom: 31px;
+
+    // .auth-form__inputs
+
+    &__inputs {
+        @include flex_column(14px);
+    }
+
+    // .auth-form__input
+
+    &__input {
+        padding: 17px 22px;
+        box-shadow: 0 0 0 1px var(--input-border);
+        border-radius: 15px;
+        align-self: stretch;
+        width: 100%;
+
+        @include font_set(normal,15px,var(--placeholder));
+        &::placeholder {
+            @include font_set(normal,15px,var(--placeholder));
+        }
+
+        &_error {
+            box-shadow: 0 0 0 1px var(--error);
+            color: var(--error);
+            &::placeholder {
+                color: var(--placeholder-error);
+            }
+        }
+
+    }
+
+    // .auth-form__forget
+
+    &__forget {
+        @include font_set(normal,13px);
+        text-decoration: underline;
+        margin-left: 15px;
+    }
+
+    // .auth-form__buttons
+
+    &__buttons {
+        @include flex_column(14px);
+    }
+
+    // .auth-form__button
+
+    &__button {
+        padding: 12px;
+        border-radius: 15px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid var(--main-color);
+        font-size: 20px;
+
+        // .auth-form__button_main
+
+        &_main {
+            background-color: var(--main-color);
+            font-weight: 500;
+            color: #fff;
+        }
+
+        // .auth-form__button_sub
+
+        &_sub {
+        }
+    }
+
+    &__errors {
+        @include flex_column();
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+
+    &__error {
+        @include font_set(normal,11px,var(--error));
+    }
+
+    &__text {
+        @include font_set(normal,16px,var(--sub-purple));
+        .auth-form__forget {
+            color: var(--main-color);
+            font-size: inherit;
+            margin: 0;
+        }
+        &_center {
+            text-align: center;
+        }
+    }
+}
+
