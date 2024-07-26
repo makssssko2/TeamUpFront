@@ -10,6 +10,8 @@
     min-width: 98vw;
     min-height: 100vh;
     background-image: url('/src/img/background-auth.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     @include flex_column();
     justify-content: center;
     align-items: center;
@@ -55,6 +57,10 @@
         margin-bottom: 36px;
         @include font_set(normal,32px);
     }
+
+    &__text {
+        @include font_set(normal,14px,var(--sub-purple));
+    }
 }
 
 .auth-form {
@@ -68,6 +74,10 @@
         @include flex_column(14px);
     }
 
+    &__inputBlock {
+        position: relative;
+    }
+
     // .auth-form__input
 
     &__input {
@@ -76,17 +86,35 @@
         border-radius: 15px;
         align-self: stretch;
         width: 100%;
+        transition: .2s;
 
         @include font_set(normal,15px,var(--placeholder));
         &::placeholder {
             @include font_set(normal,15px,var(--placeholder));
         }
 
-        &_error {
+        &:hover {
+            box-shadow: 0 4px 6px 0 var(--input-shadow);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--main-color);
+            color: var(--sub-purple);
+        }
+
+        &_error{
             box-shadow: 0 0 0 1px var(--error);
             color: var(--error);
             &::placeholder {
                 color: var(--placeholder-error);
+            }
+
+            &:hover {
+                box-shadow: 0 4px 6px 0 var(--input-error-shadow);
+            }
+    
+            &:focus {
+                box-shadow: 0 0 0 2px var(--error);
             }
         }
 
@@ -94,8 +122,22 @@
 
     // .auth-form__forget
 
+
+    &__link,&__link:visited,&__link:link{
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        @include flex_row(7px);
+        align-items: flex-start;
+        @include font_set(normal);
+    }
+
+    &__back {
+        position: relative;
+        right: 14px;
+    }
+
     &__forget {
-        @include font_set(normal,13px);
+        font-size: 13px;
         text-decoration: underline;
         margin-left: 15px;
     }
@@ -106,6 +148,13 @@
         @include flex_column(14px);
     }
 
+
+    &__eye {
+        position: absolute;
+        top: 21px;
+        right: 21px;
+    }
+
     // .auth-form__button
 
     &__button {
@@ -113,7 +162,7 @@
         border-radius: 15px;
         width: 100%;
         text-align: center;
-        border: 1px solid var(--main-color);
+        box-shadow: 0 0 0 1px var(--main-color);
         font-size: 20px;
 
         // .auth-form__button_main
@@ -122,6 +171,11 @@
             background-color: var(--main-color);
             font-weight: 500;
             color: #fff;
+            &:disabled {
+                background-color: var(--disabled-bg);
+                color: var(--placeholder);
+                box-shadow: none;
+            }
         }
 
         // .auth-form__button_sub

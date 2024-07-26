@@ -1,0 +1,48 @@
+.forget {
+    .auth {
+        // .auth__title
+
+        &__title {
+            font-size: 30px;
+        }
+
+        // .auth__response
+
+        &__response {
+        }
+
+        // .auth__form
+
+        &__form {
+        }
+    }
+    .auth-form {
+
+        row-gap: 26px;
+        margin-bottom: 86px;
+
+        // .auth-form__inputs
+
+        &__inputs {
+        }
+
+        // .auth-form__input
+
+        &__input {
+        }
+
+        // .auth-form__buttons
+
+        &__buttons {
+        }
+
+        // .auth-form__button
+
+        &__button {
+            // .auth-form__button_main
+
+            &_main {
+            }
+        }
+    }
+}

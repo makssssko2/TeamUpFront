@@ -20,7 +20,6 @@ export default function Registration() {
         e.preventDefault();
         let correctFlag = true;
         for(let input in inputs) {
-            console.log(inputs[input])
             inputs[input].onBlur();
             correctFlag = inputs[input].correct ? correctFlag && true : false;
         }
@@ -43,7 +42,7 @@ export default function Registration() {
         <div className="registration">
             <h1 className="auth__title">Регистрация</h1>
             {servResponse ? <h3 className="auth__response">{servResponse}</h3> : null}
-            <form action="" className="auth__form auth-form">
+            <form action="" className="auth__form auth-form" method="post">
                 <div className="auth-form__inputs">
                     <SmartInput className="auth-form__input" name="email" type='email' input={email}>Email</SmartInput>
                     <SmartInput className="auth-form__input" name="name" type='text' input={name}>Имя</SmartInput>

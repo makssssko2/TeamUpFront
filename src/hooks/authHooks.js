@@ -97,7 +97,7 @@ const useValid = (value, validations) => {
                         break;
             }
         }
-    }, [value]);
+    }, [value,validations['passEqual']]);
 
     useEffect(() => {
         setCorrect(
