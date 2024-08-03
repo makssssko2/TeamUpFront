@@ -1,0 +1,14 @@
+.page {
+
+    // .page__mainLayout
+
+    &__mainLayout {
+        min-width: 98vw;
+        min-height: 100vh;
+    }
+}
+.mainLayout {
+    background-image: url('/src/img/background-auth.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

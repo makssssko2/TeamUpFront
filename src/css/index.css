@@ -67,26 +67,29 @@ legend {
   display: block; }
 
 :root {
-  --container-width: 1200px;
+  --container-width: 1280px;
   --container-padding: 15px;
   --default-ff: 'NT Somic';
   --default-fw: 400;
   --main-color: #1c0fb1;
   --default-text-color: var(--main-color);
   --sub-purple: #2d164a;
+  --dark-purple: #3E1D67;
   --input-border: #E2E2E2;
+  --admin-menu: #C2D2F2;
   --placeholder: #909090;
   --error: #B92121;
   --placeholder-error: #DF8F8F;
   --disabled-bg: #EFEFEF;
+  --admin-bg: #ECF4FF;
   --input-shadow: rgba(122, 154, 238, 0.25);
   --input-error-shadow: rgba(185, 33, 33, 0.25); }
 
-.auth, .auth__container, .auth-form, .auth-form__inputs, .auth-form__buttons, .auth-form__errors {
+.auth, .auth__container, .auth-form, .auth-form__inputs, .auth-form__buttons, .auth-form__errors, .mainLayout, .admin-menu, .admin__users, .admin__section {
   display: flex;
   flex-direction: column; }
 
-.auth-form__link, .auth-form__link:visited, .auth-form__link:link {
+.auth-form__link, .auth-form__link:visited, .auth-form__link:link, .header__nav, .admin__container, .admin__buttons, .admin-section__inputBlock {
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -205,7 +208,8 @@ html {
   .auth-form__forget {
     font-size: 13px;
     text-decoration: underline;
-    margin-left: 15px; }
+    margin-left: 15px;
+    margin-top: -8px; }
   .auth-form__buttons {
     row-gap: 14px; }
   .auth-form__eye {
@@ -269,5 +273,133 @@ html {
 .confirm .auth-form__buttons .auth__text {
   text-align: center;
   margin: 0; }
+
+.page__mainLayout {
+  min-width: 98vw;
+  min-height: 100vh; }
+
+.mainLayout {
+  background-image: url("/src/img/background-auth.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.mainLayout__header {
+  padding: 37px 0; }
+
+.header__container {
+  display: flex;
+  justify-content: space-between; }
+.header__logo {
+  max-width: 164px; }
+.header__nav {
+  column-gap: 13px; }
+
+.header-nav__button {
+  padding: 7px 15px;
+  border-radius: 150px;
+  box-shadow: 0 0 0 1px var(--dark-purple);
+  color: var(--dark-purple);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--default-ff); }
+
+.mainLayout {
+  row-gap: 0px; }
+
+.mainLayout__admin {
+  flex-grow: 2;
+  background-color: var(--admin-bg);
+  padding: 35px 0; }
+
+.admin__container {
+  column-gap: 55px;
+  align-items: flex-start; }
+.admin-menu {
+  padding: 17px 10px;
+  background-color: #FFF;
+  row-gap: 0px;
+  flex-grow: 1;
+  max-width: 200px;
+  border-radius: 10px;
+  border: 1px solid var(--admin-menu); }
+  .admin-menu__item {
+    padding: 10px 16px;
+    color: var(--placeholder);
+    font-size: 16px;
+    font-weight: var(--default-fw);
+    line-height: normal;
+    font-family: var(--default-ff);
+    letter-spacing: -0.02em; }
+    .admin-menu__item_active {
+      color: var(--dark-purple); }
+  .admin-menu__item:not(:last-child) {
+    border-bottom: 2px solid #DCE6F9; }
+
+.admin__users {
+  row-gap: 0px;
+  flex-grow: 1;
+  height: calc(100vh - 110px - 35px * 2);
+  position: relative;
+  z-index: 222; }
+.admin__title {
+  color: var(--dark-purple);
+  font-size: 26px;
+  font-weight: var(--default-fw);
+  line-height: normal;
+  font-family: var(--default-ff);
+  margin-bottom: 8px; }
+.admin__section {
+  row-gap: 18px;
+  padding: 26px 0; }
+.admin__section:not(:last-child) {
+  border-top: 2px solid var(--admin-menu); }
+.admin__buttons {
+  flex-grow: 1;
+  column-gap: 16px;
+  align-items: flex-end;
+  margin-top: 20px; }
+.admin__button {
+  padding: 8px 33px;
+  border-radius: 150px;
+  box-shadow: 0 0 0 1px var(--main-color);
+  color: var(--default-font-color);
+  font-size: 16px;
+  font-weight: var(--default-fw);
+  line-height: normal;
+  font-family: var(--default-ff); }
+  .admin__button_active {
+    color: #FFF;
+    background-color: var(--main-color); }
+
+.admin-section___title {
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  font-family: var(--default-ff); }
+.admin-section__inputBlock {
+  width: 100%;
+  column-gap: 19px;
+  justify-content: space-between; }
+.admin-section__input {
+  flex-grow: 1;
+  max-width: 854px;
+  padding: 7px 24px;
+  background-color: #FFF;
+  box-shadow: 0 0 0 2px var(--main-color);
+  border-radius: 100px; }
+.admin-section__button {
+  padding: 8px 33px;
+  border-radius: 150px; }
+  .admin-section__button_main {
+    color: #FFF;
+    background-color: var(--main-color); }
+.admin-section__text {
+  color: var(--main-color);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: normal;
+  font-family: var(--default-ff); }
 
 /*# sourceMappingURL=index.css.map */

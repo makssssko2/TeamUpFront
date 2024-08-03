@@ -13,8 +13,6 @@ export default function HomePage() {
                     </p>
                 </>
             ) : "UnAuthorized"}
-            <br></br>
-            {auth.user ? <button onClick={(e) => auth.logout()} style={{border:"2px solid red"}}>Логаут</button> : null}
         </>
     );
 }

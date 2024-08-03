@@ -1,0 +1,10 @@
+.page {
+
+    // .page__mainLayout
+
+    &__mainLayout {
+    }
+}
+.mainLayout {
+    @include flex_column();
+}

@@ -1,0 +1,108 @@
+.admin {
+
+    // .admin__users
+
+    &__users {
+        @include flex_column();
+        flex-grow: 1;
+        height: calc(100vh - 110px - 35px * 2);
+        position: relative;
+        z-index: 222;
+    }
+
+    // .admin__title
+
+    &__title {
+        @include font_set(normal,26px,var(--dark-purple));
+        margin-bottom: 8px;
+    }
+
+    // .admin__section
+
+    &__section {
+        @include flex_column(18px);
+        padding: 26px 0;
+    }
+
+    &__section:not(:last-child) {
+        border-top: 2px solid var(--admin-menu);
+    }
+
+    // .admin__buttons
+
+    &__buttons {
+        flex-grow: 1;
+        @include flex_row(16px);
+        align-items: flex-end;
+        margin-top: 20px;
+    }
+
+    // .admin__button
+
+    &__button {
+        padding: 8px 33px;
+        border-radius: 150px;
+        box-shadow: 0 0 0 1px var(--main-color);
+        @include font_set(normal,16px);
+
+        // .admin__button_active
+
+        &_active {
+            color: #FFF;
+            background-color: var(--main-color);
+        }
+    }
+}
+.users {
+}
+.admin-section {
+
+    // .admin-section__
+
+    &__ {
+
+        // .admin-section___title
+
+        &_title {
+            @include font_set(normal,20px,var(--main-color),500);
+        }
+    }
+
+    // .admin-section__inputBlock
+
+    &__inputBlock {
+        width: 100%;
+        @include flex_row(19px);
+        justify-content: space-between;
+    }
+
+    // .admin-section__input
+
+    &__input {
+        flex-grow: 1;
+        max-width: 854px;
+        padding: 7px 24px;
+        background-color: #FFF;
+        box-shadow: 0 0 0 2px var(--main-color);
+        border-radius: 100px;
+    }
+
+    // .admin-section__button
+
+    &__button {
+        padding: 8px 33px;
+        border-radius: 150px;
+        // .admin-section__button_main
+
+        &_main {
+            color: #FFF;
+            background-color: var(--main-color);
+        }
+    }
+
+    // .admin-section__text
+
+    &__text {
+        @include font_set(normal,17px,var(--main-color),400)
+    }
+}

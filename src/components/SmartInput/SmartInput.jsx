@@ -3,7 +3,7 @@ import close from "../../img/closeeye.svg";
 import open from "../../img/openeye.svg";
 
 export default function SmartInput({ children, className, type, name, input }) {
-    const [showPass, setShowPass] = useState(true);
+    const [showPass, setShowPass] = useState(false);
     return (
         <div className="auth-form__inputBlock">
             <input

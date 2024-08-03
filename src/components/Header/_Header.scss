@@ -1,0 +1,42 @@
+.mainLayout {
+
+    // .mainLayout__header
+
+    &__header {
+        padding: 37px 0;
+    }
+}
+.header {
+
+    // .header__container
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // .header__logo
+
+    &__logo {
+        max-width: 164px;
+    }
+
+    // .header__nav
+
+    &__nav {
+        @include flex_row(13px)
+    }
+}
+.container {
+}
+.header-nav {
+
+    // .header-nav__button
+
+    &__button {
+        padding: 7px 15px;
+        border-radius: 150px;
+        box-shadow: 0 0 0 1px var(--dark-purple);
+        @include font_set(normal,16px,var(--dark-purple),500);
+    }
+}
